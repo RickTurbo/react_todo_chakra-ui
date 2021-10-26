@@ -37,7 +37,7 @@ function AddTodo({ addTodo }) {
       <HStack mt="8">
         <Input
           variant="filled"
-          placeholder="learning chakraui with todo app"
+          placeholder="Please enter what to do"
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
