@@ -13,7 +13,7 @@ import { FaTrash } from "react-icons/fa";
 function TodoList({ todos, deleteTodo }) {
   if (!todos.length) {
     return (
-      <Badge colorScheme="green" p="4" m="4">
+      <Badge colorScheme="green" p="4" m="4" borderRadius='lg'>
         No Todos!!
       </Badge>
     );
