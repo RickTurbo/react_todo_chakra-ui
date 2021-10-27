@@ -1,22 +1,17 @@
-import { Heading, VStack, IconButton, Box, useColorMode } from "@chakra-ui/react";
-import { useEffect, useState,  } from "react";
+import {
+  Heading,
+  VStack,
+  IconButton,
+  Box,
+  useColorMode,
+} from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 import { FaSun, FaMoon } from "react-icons/fa";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const initialTodos = [
-    {
-      id: 1,
-      body: "get bread",
-    },
-    {
-      id: 2,
-      body: "get butter",
-    },
-  ];
-
   const [todos, setTodos] = useState(
     () => JSON.parse(localStorage.getItem("todos")) || []
   );
@@ -36,12 +31,12 @@ function App() {
     setTodos([...todos, todo]);
   }
 
-  const {colorMode, toggleColorMode} = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <VStack p={4}>
       <IconButton
-        icon={colorMode === 'light' ? <FaSun />:<FaMoon/>}
+        icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
         isRound="true"
         size="lg"
         alignSelf="flex-end"
